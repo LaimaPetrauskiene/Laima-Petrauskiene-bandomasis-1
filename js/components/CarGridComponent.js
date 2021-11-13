@@ -9,20 +9,39 @@ class CarGridComponent {
     }
 
 
-    fetchCars = () => API.fetchCars(this.saveCars, alert);
+    initFetch = () => setTimeout(() => {
+        API.fetchCars(
+          (cars) => {
+            this.state.loading = false;
+            this.saveCars(cars);
+          },
+          (err) => {
+            alert(err);
+            this.state.loading = false;
+            this.render();
+          }
+        );
+      }, 1000);
 
     saveCars = (cars) => {
         this.state.cars = cars;
-        this.state.loading = false;
+
         this.htmlElement.className = 'row g-3';
 
         this.render();
     }
 
+    deleteCar = (id) => {
+        API.deleteCar(
+            id, 
+           () => API.fetchCars(this.saveCars, alert), 
+            alert);
+    }
+
 
     init = () => {
         this.state.loading = true;
-        this.fetchCars();
+        this.initFetch();
         this.htmlElement = document.createElement('div');
         this.render();
     }
@@ -38,16 +57,21 @@ class CarGridComponent {
         const { loading, cars } = this.state;
         if (loading) {
             this.htmlElement.innerHTML = `<div class="text-center"><img src="assets/loading.gif"></div>`;
-        } else if(cars.length > 0){
+        } else if (cars.length > 0) {
             this.htmlElement.innerHTML = '';
             const carElements = cars
-            .map(x => new CarCardComponent(x))
-            .map(x => x.htmlElement)
-            .map(this.wrapInColumn);
-            this.htmlElement.append(...carElements);
-            
-        }else{
+                .map(({ id, ...props }) => new CarCardComponent({
+                    ...props,
+                    onDelete: () => this.deleteCar(id)
+                }))
+                .map(x => x.htmlElement)
+                .map(this.wrapInColumn);
+            this.htmlElement.append(...carElements)
+
+        } else {
             this.htmlElement.innerHTML = `<h2>Šiuo metu mašinų nėra</h2>`;
         }
+
     }
 }
+

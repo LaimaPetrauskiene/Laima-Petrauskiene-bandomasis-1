@@ -1,65 +1,52 @@
-
 {
-    "cars": [
-        {
-            "id": "1",
-            "brand": "Subaru",
-            "model": "Outback",
-            "year": 2014,
-            "fuelTypes": "petrol",
-            "price": {
-                "amount": 8263,
-                "currency": "$"
-            },
-            "imgSrc": "https://www.motortrend.com/uploads/sites/10/2015/11/2014-subaru-outback-3.6-r-limited-wagon-angular-front.png"
-        },
-        {
-            "id": "2",
-            "brand": "Toyota",
-            "model": "RAV4",
-            "year": 2021,
-            "fuelTypes": "hybrid",
-            "price": {
-                "amount": 20000,
-                "currency": "€"
-            },
-            "imgSrc": "https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2021/rav4prime/3U5/1.png?bg=fff&fm=webp&w=930"
-        },
-        {
-            "id": "3",
-            "brand": "Nissan",
-            "model": "Leaf",
-            "year": 2017,
-            "fuelTypes": "electric",
-            "price": {
-                "amount": 6054,
-                "currency": "€"
-            },
-            "imgSrc": "https://images.hgmsites.net/hug/2017-nissan-leaf_100580679_h.jpg"
-        },
-        {
-            "id": "4",
-            "brand": "VW",
-            "model": "Passat",
-            "year": 1991,
-            "fuelTypes": "gas",
-            "price": {
-                "amount": 220,
-                "currency": "$"
-            },
-            "imgSrc": "https://img.autogidas.lt/10_1_6827384/volkswagen-passat-1991-1993.jpg"
-        },
-        {
-            "id": "5",
-            "brand": "Audi",
-            "model": "100",
-            "year": 1990,
-            "fuelTypes": "dysel",
-            "price": {
-                "amount": 800,
-                "currency": "€"
-            },
-            "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Audi_100_Diesel_%2814993431287%29.jpg"
-        }
-]
+  "cars": [
+    {
+      "id": "2",
+      "brand": "Toyota",
+      "model": "RAV4",
+      "year": 2021,
+      "fuelTypes": "hybrid",
+      "price": {
+        "amount": 20000,
+        "currency": "€"
+      },
+      "imgSrc": "https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2021/rav4prime/3U5/1.png?bg=fff&fm=webp&w=930"
+    },
+    {
+      "id": "3",
+      "brand": "Nissan",
+      "model": "Leaf",
+      "year": 2017,
+      "fuelTypes": "electric",
+      "price": {
+        "amount": 6054,
+        "currency": "€"
+      },
+      "imgSrc": "https://images.hgmsites.net/hug/2017-nissan-leaf_100580679_h.jpg"
+    },
+    {
+      "id": "4",
+      "brand": "VW",
+      "model": "Passat",
+      "year": 1991,
+      "fuelTypes": "gas",
+      "price": {
+        "amount": 200,
+        "currency": "$"
+      },
+      "imgSrc": "https://img.autogidas.lt/10_1_6827384/volkswagen-passat-1991-1993.jpg"
+    },
+    {
+      "id": "5",
+      "brand": "Audi",
+      "model": "100",
+      "year": 1990,
+      "fuelTypes": "dysel",
+      "price": {
+        "amount": 800,
+        "currency": "€"
+      },
+      "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Audi_100_Diesel_%2814993431287%29.jpg"
+    }
+  ]
 }

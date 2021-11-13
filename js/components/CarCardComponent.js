@@ -8,33 +8,38 @@ class CarCardComponent {
     }
 
 
-
     init = () => {
-        const { brand, model, year, fuelTypes, price, imgSrc } = this.props;
+        const { brand, model, year, fuelType, price, imgSrc, onDelete } = this.props;
         const { amount, currency } = price;
-
+    
         const finalPrice = currency === '$' ? amount * CarCardComponent.USD_EUR : amount;
         const formatedPrice = Math.round(100 * finalPrice) / 100 + ' €';
-
+    
         this.htmlElement = document.createElement('article');
-        this.htmlElement.className = 'card p-3 shadow';
+        this.htmlElement.className = 'card shadow';
         this.htmlElement.innerHTML = `
-        <img src="${imgSrc}" />
-        <h2 class="h5">${brand} ${model}</h2>
-        <ul>
+        <img src="${imgSrc}" class="card-img-top" height="200px" style="object-fit: cover">
+        <div class="card-body">
+          <h2 class="h5">${brand} ${model}</h2>
+          <ul>
             <li>
-            <span>year</span>:
-            <strong>${year}</strong>
+              <span>year</span>:
+              <strong>${year}</strong>
             </li>
             <li>
-            <span>fuel type</span>:
-            <strong>${fuelTypes}</strong>
+              <span>fuel type</span>:
+              <strong>${fuelType}</strong>
             </li>
             <li>
-            <span>price</span>:
-            <strong>${formatedPrice}</strong>
+              <span>price</span>:
+              <strong>${formatedPrice}</strong>
             </li>
-        </ul>
-        `;
+          </ul>
+          <div class="text-center">
+            <button class="btn btn-danger">Ištrinti</button>
+          </div>
+        </div>`;
+        const btn = this.htmlElement.querySelector('.btn');
+        btn.addEventListener('click', onDelete);
+      }
     }
-}
