@@ -8,7 +8,7 @@
             "year": 2014,
             "fuelTypes": "petrol",
             "price": {
-                "amount": 8000,
+                "amount": 8263,
                 "currency": "$"
             },
             "imgSrc": "https://www.motortrend.com/uploads/sites/10/2015/11/2014-subaru-outback-3.6-r-limited-wagon-angular-front.png"
@@ -44,7 +44,7 @@
             "year": 1991,
             "fuelTypes": "gas",
             "price": {
-                "amount": 200,
+                "amount": 220,
                 "currency": "$"
             },
             "imgSrc": "https://img.autogidas.lt/10_1_6827384/volkswagen-passat-1991-1993.jpg"
