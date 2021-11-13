@@ -19,7 +19,6 @@ class CarGridComponent {
     }
 
 
-
     init = () => {
         this.state.loading = true;
         this.fetchCars();
@@ -30,9 +29,16 @@ class CarGridComponent {
     render = () => {
         const { loading, cars } = this.state;
         if (loading) {
-            this.htmlElement.innerHTML = `Siunčiama...`;
-        } else {
-            this.htmlElement.innerHTML = `Parsiųsta!...`;
+            this.htmlElement.innerHTML = `<div class="text-center"><img src="assets/loading.gif"></div>`;
+        } else if(cars.length > 0){
+            this.htmlElement.innerHTML = '';
+            const carElements = cars
+            .map(x => new CarCardComponent(x))
+            .map(x => x.htmlElement);
+            this.htmlElement.append(...carElements);
+            
+        }else{
+            this.htmlElement.innerHTML = `<h2>Šiuo metu mašinų nėra</h2>`;
         }
     }
 }
