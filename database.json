@@ -12,7 +12,7 @@
                 "currency": "$"
             },
             "imgSrc": "https://www.motortrend.com/uploads/sites/10/2015/11/2014-subaru-outback-3.6-r-limited-wagon-angular-front.png"
-        }
+        },
         {
             "id": "2",
             "brand": "Toyota",
@@ -24,7 +24,7 @@
                 "currency": "€"
             },
             "imgSrc": "https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2021/rav4prime/3U5/1.png?bg=fff&fm=webp&w=930"
-        }
+        },
         {
             "id": "3",
             "brand": "Nissan",
@@ -36,7 +36,7 @@
                 "currency": "€"
             },
             "imgSrc": "https://images.hgmsites.net/hug/2017-nissan-leaf_100580679_h.jpg"
-        }
+        },
         {
             "id": "4",
             "brand": "VW",
@@ -48,7 +48,7 @@
                 "currency": "$"
             },
             "imgSrc": "https://img.autogidas.lt/10_1_6827384/volkswagen-passat-1991-1993.jpg"
-        }
+        },
         {
             "id": "5",
             "brand": "Audi",
