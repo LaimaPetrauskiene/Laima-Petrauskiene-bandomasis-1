@@ -1,0 +1,24 @@
+{
+  "name": "laima-petrauskiene-bandomasis-1",
+  "version": "1.0.0",
+  "description": "CAFE DOM atsiskaitymas (bandomasis 1)",
+  "main": "index.js",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start-unix": "node_modules/.bin/json-server --watch database.json",
+    "start-win": "node_modules\\.bin\\json-server --watch database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaimaPetrauskiene/Laima-Petrauskiene-bandomasis-1.git"
+  },
+  "author": "Laima Petrauskiene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaimaPetrauskiene/Laima-Petrauskiene-bandomasis-1/issues"
+  },
+  "homepage": "https://github.com/LaimaPetrauskiene/Laima-Petrauskiene-bandomasis-1#readme"
+}
